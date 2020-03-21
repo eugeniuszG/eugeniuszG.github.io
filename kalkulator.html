@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="./styles/kalkulator.css" rel="stylesheet">
+    <script src="./javaScript/kalkulator.js"></script>
+    <title>Kalkulator</title>
+</head>
+<body>
+
+<div id = "block">
+    <div class="divTable" id = "kalkulator">
+        <div class="divRow">
+            <form name="form"><div class = "divCell"><input disabled placeholder="0"  class = "textview" id="result" name="result"></div></form>
+        </div>
+        <div class="divRow">
+            <div class = "div4Cells"><div><button id = del value="C" onclick = "deletevse()">C</button></div></div>
+            <div class = "div4Cells"><div><button id = squre  onclick="back()">&#8594;</button></div></div> <!-- удалить один симовл -->
+            <div class = "div4Cells"><div><button id = koren  onclick="koren()">&#8730;</button></div></div> <!-- корень -->
+            <div class = "div4Cells"><div><button id = divide onclick="Operations('/')">&divide;</button></div></div> <!-- деление -->
+        </div>
+        <div class="divRow">
+            <div class = "div4Cells"><div><button id = numb7 value=7 onclick="insert(7)">7</button></div></div>
+            <div class = "div4Cells"><div><button id = numb8 value=8 onclick="insert(8)">8</button></div></div>
+            <div class = "div4Cells"><div><button id = numb9 value=9 onclick="insert(9)">9</button></div></div>
+            <div class = "div4Cells"><div><button id = mult onclick="Operations('*')">&times;</button></div></div>  <!-- умножение -->
+        </div>
+        <div class="divRow">
+            <div class = "div4Cells"><div><button id = numb4 value=4 onclick="insert(4)">4</button></div></div>
+            <div class = "div4Cells"><div><button id = numb5 value=5 onclick="insert(5)">5</button></div></div>
+            <div class = "div4Cells"><div><button id = numb6 value=6 onclick="insert(6)">6</button></div></div>
+            <div class = "div4Cells"><div><button id = minus value="-" onclick="Operations('-')">-</button></div></div>  <!-- разница -->
+        </div>
+        <div class="divRow">
+            <div class = "div4Cells"><div><button id = numb1 value=1 onclick="insert(1)">1</button></div></div>
+            <div class = "div4Cells"><div><button id = numb2 value=2 onclick="insert(2)">2</button></div></div>
+            <div class = "div4Cells"><div><button id = numb3 value=3 onclick="insert(3)">3</button></div></div>
+            <div class = "div4Cells"><div><button id = plus value="+" onclick="Operations('+')">+</button></div></div> <!-- сложение -->
+        </div>    
+        <div class="divRow">
+            <div class = "div4Cells"><div><button id = plusminus onclick="plusminus()">&plusmn;</button></div></div> <!-- плюс минус -->
+            <div class = "div4Cells"><div><button id = zero value=0 onclick="insert(0)">0</button></div></div> 
+            <div class = "div4Cells"><div><button id = dot value="." onclick="dot('.')">.</button></div></div> <!-- точка -->
+            <div class = "div4Cells"><div><button id = euqal value="=" onclick="equal()">=</button></div></div> <!-- равно -->
+        </div> 
+    </div>    
+</div>
+ 
+</body>
+</html>

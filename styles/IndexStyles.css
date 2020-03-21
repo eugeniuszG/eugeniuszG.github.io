@@ -1,6 +1,6 @@
 body{
     margin: 0;
-    overflow: hidden;
+    overflow: scroll;
     background: lightgrey;
 }
 
@@ -58,7 +58,7 @@ body{
     border-radius: 10px 10px 0 0;
     background:#292B2C;
     align-items: center;
-    position: fixed;
+    position: sticky;
     bottom: 0;
     margin-left: 5%;
 
@@ -109,5 +109,13 @@ li{
     font-size: 16px;
 }
 
+
+/* Custom Bootsrap css*/
+.row{
+    padding: 1rem;
+}
+.col{
+    padding: 10px;
+}
 
 
