@@ -1,0 +1,8 @@
+@mixin flexCenter {
+    display: flex;
+    align-items: center;
+}
+
+@mixin hidden {
+    display: none;
+}

@@ -1,0 +1,130 @@
+@import './variabals';
+@import './mixin';
+
+@import './card'; //here is custom card css
+
+
+
+body{
+    margin: $marginZero;
+    overflow: scroll;
+    background: $background;
+}
+
+
+
+//Here is nav-bar starts
+.nav-wrapper{
+    @include flexCenter();
+    position: relative;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    margin: auto;
+    width: 80%;
+    height: 60px;
+    border-radius: 5px 5px 10px 10px;
+    padding: 0 25px;
+    z-index: 2;
+    background: #292B2C;
+    box-shadow:0 1px 2px lightsteelblue;
+
+}
+
+.nav-tabs{
+    @include flexCenter();
+    font-weight: 600;
+    font-size: 18px;
+    list-style: none;
+    background: lightgrey;
+    height: 50px;
+    border-radius: 5px 5px 5px 5px;
+}
+
+.nav-tab {
+    .menu-btn{
+    cursor: pointer;
+    }
+    &:hover{
+        background: $whiteSmoke;
+    }
+    padding-left: 5px;
+    padding-right: 5px;
+}
+
+
+.hidden{
+    @include hidden();
+}
+//end of nav-bar
+
+
+
+// Here is footer starts
+.footer-wrapper{
+    @include flexCenter();
+    width: 90%;
+    height: 90px;
+    border-radius: 10px 10px 0 0;
+    background:#292B2C; 
+    position: sticky;
+    bottom: 0;
+    margin-left: 5%;
+
+}
+
+.footer-content{
+    @include flexCenter();
+    justify-content: center;
+    color: lightsteelblue;
+    font-weight: 600;
+    font-size: 18px;
+    margin: auto;
+}
+// end of Footer
+
+
+//about me section
+.text-center{
+    text-align: center;
+}
+
+.intro-img{
+    img{
+        margin: auto;
+    }
+    
+}
+
+.intro-text{
+    margin: auto;
+}
+.intro-social {
+    margin: auto;
+    display: flex;
+}
+.list-inline{
+    margin: auto;
+    list-style: none;
+    display: flex;
+    padding:5px 5px;
+    li{
+        padding: 5px 5px;
+    }
+}
+
+.aboutMe{
+    width: 70%;
+    background: rgb(198, 221, 250);
+    margin: auto;
+    padding-top: 8px;
+    border-radius: 15px;
+}
+.description{
+    padding: 20px 20px 20px;
+    font-weight: 400;
+    font-size: 16px;
+}
+//end of about me section
+
+

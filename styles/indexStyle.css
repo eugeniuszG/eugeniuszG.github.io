@@ -1,0 +1,232 @@
+.container {
+  width: 70%;
+  padding-left: 15px;
+  padding-right: 15px;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.row {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 1rem;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  margin-right: -15px;
+  margin-right: -15px;
+}
+
+.col {
+  padding: 10px;
+  -ms-flex-preferred-size: 0;
+      flex-basis: 0;
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+  max-width: 100%;
+  position: relative;
+  border-radius: .25rem;
+}
+
+.card {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  background-color: #c6ddfa;
+  border-radius: .25rem;
+  margin: 0 auto;
+}
+
+.card-body {
+  padding: 1.25rem;
+}
+
+.card-title {
+  padding-bottom: .75rem;
+}
+
+.card-text {
+  margin-bottom: 1rem;
+}
+
+.card-img, .card-img-top {
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+  width: 100%;
+}
+
+.btn {
+  display: inline-block;
+  font-weight: 400;
+  color: #212529;
+  text-align: center;
+  vertical-align: middle;
+  cursor: pointer;
+  color: white;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  background-color: #007bff;
+  border: 1px solid transparent;
+  padding: .375rem .75rem;
+  font-size: 1rem;
+  line-height: 1.5;
+  border-radius: .25rem;
+  text-decoration: none;
+}
+
+body {
+  margin: 0;
+  overflow: scroll;
+  background: lightgray;
+}
+
+.nav-wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  position: relative;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin: auto;
+  width: 80%;
+  height: 60px;
+  border-radius: 5px 5px 10px 10px;
+  padding: 0 25px;
+  z-index: 2;
+  background: #292B2C;
+  -webkit-box-shadow: 0 1px 2px lightsteelblue;
+          box-shadow: 0 1px 2px lightsteelblue;
+}
+
+.nav-tabs {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-weight: 600;
+  font-size: 18px;
+  list-style: none;
+  background: lightgrey;
+  height: 50px;
+  border-radius: 5px 5px 5px 5px;
+}
+
+.nav-tab {
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+.nav-tab .menu-btn {
+  cursor: pointer;
+}
+
+.nav-tab:hover {
+  background: whitesmoke;
+}
+
+.hidden {
+  display: none;
+}
+
+.footer-wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 90%;
+  height: 90px;
+  border-radius: 10px 10px 0 0;
+  background: #292B2C;
+  position: -webkit-sticky;
+  position: sticky;
+  bottom: 0;
+  margin-left: 5%;
+}
+
+.footer-content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  color: lightsteelblue;
+  font-weight: 600;
+  font-size: 18px;
+  margin: auto;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.intro-img img {
+  margin: auto;
+}
+
+.intro-text {
+  margin: auto;
+}
+
+.intro-social {
+  margin: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.list-inline {
+  margin: auto;
+  list-style: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 5px 5px;
+}
+
+.list-inline li {
+  padding: 5px 5px;
+}
+
+.aboutMe {
+  width: 70%;
+  background: #c6ddfa;
+  margin: auto;
+  padding-top: 8px;
+  border-radius: 15px;
+}
+
+.description {
+  padding: 20px 20px 20px;
+  font-weight: 400;
+  font-size: 16px;
+}
+/*# sourceMappingURL=indexStyle.css.map */
