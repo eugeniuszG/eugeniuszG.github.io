@@ -158,16 +158,14 @@ body {
     overflow-x: hidden;
   }
   .nav-container {
-    width: 40%;
+    width: 60%;
     position: absolute;
     right: 0px;
     height: 92vh;
     top: 65px;
     background-color: #292B2C;
     border-radius: 5px;
-    display: block;
-    -webkit-transform: translateX(110%);
-            transform: translateX(110%);
+    display: none;
   }
   .nav-tabs {
     top: 0px;

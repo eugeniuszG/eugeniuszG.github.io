@@ -4,13 +4,11 @@ let hasclicked = false;
 
 btnBurger.addEventListener('click', ()=>{
     if (hasclicked === false) {
-        sideMenu.style.transition = 'all 1s'
-        sideMenu.style.transform = 'translateX(0%)'
+        sideMenu.style.display = 'block'
         hasclicked = !hasclicked;        
     }
     else{
-        sideMenu.style.transition = 'all 1s'
-        sideMenu.style.transform = 'translateX(110%)'
+        sideMenu.style.display = 'none'
         hasclicked = !hasclicked;
     }
 
