@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up</title>
+    <link rel="stylesheet" href="./styles/signUp.css">
+
+</head>
+<body>
+
+<div class="form-wrapper">
+
+    
+    <form name='form' onsubmit="return validationForm()" method="POST">
+        <h3>Please fill form to Sign Up</h3>
+        <div class="form-container">
+            
+            <div class="column">
+            <div class="row">
+                <label for="">First Name:</label>
+                <input  class="firstName" type="text" name="firstName">
+                <div class="error" id="firstNameErr"></div>
+            </div>
+
+            <div class="row">
+                <label for="">Last Name:</label>
+                <input class="lastName" type="text" name="lastName">
+                <div class="error" id="lastNameErr"></div>
+            </div>
+
+            <div class="row">
+                <label for="">E-mail address:</label>
+                <input class="email" type="text" name="email">
+                <div class="error" id="emailErr"></div>
+            </div>
+            <div class="row">
+                <label for="">Password:</label>
+                <input class="password" type="password" name="email">
+                <div class="error" id="passwordErr"></div>
+            </div>
+
+            <div class="row">
+                <label for="">Country:</label>
+                <select class="country" name="country">
+                    <option>--Select country--</option>
+                    <option>Poland</option>
+                    <option>Belarus</option>
+                    <option>United Kingdom</option>
+                </select>
+                <div class="error" id="countryErr"></div>
+            </div>
+
+
+            <div class="row-inline">
+                <label><input type="checkbox" id="policies">I accept terms and policies</label>
+                <div class="error" id="acceptionErr"></div>
+            </div>
+
+            <div class="row-submit">
+                <input class='submit' type="submit" value="Submit">
+                <input  type="reset" value="Reset">
+            </div>
+        </div>
+    </form>
+</div>
+<script src="./javaScript/signUp.js"></script>    
+</body>
+</html>

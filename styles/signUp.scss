@@ -1,0 +1,79 @@
+@import './variabals';
+
+body{
+    background: lightgrey;
+}
+
+h3{
+    text-align: center;
+    padding-top: 10px;
+}
+
+form{
+    padding-top: 10px;
+}
+
+.form-wrapper{
+    width: 400px;
+    background: white;
+    border-radius: 10px;
+    margin: auto;
+    padding-bottom: 1rem;
+}
+
+.form-container{
+    width: 300px;
+    justify-content: center;
+    align-items: center;
+    margin-left: 20%;
+
+}
+
+label{
+    display: block;
+}
+
+.row{
+    padding: 10px;
+    input{
+        width: 200px;
+        height: 30px;
+        border-radius: 5px;
+        padding-left: 5px;
+        box-shadow: none;
+    }
+}
+
+
+.row-submit{
+    align-items: center;
+    justify-content: center;
+    padding-left: 40px;
+    input{
+        width: 150px;
+        height: 30px;
+        background-color: $primiaryBtn;
+        border-radius: 5px;
+        color: white;
+        padding: 5px;
+    }
+}
+
+.row-inline{
+
+    label{
+        padding: 10px;
+        display: inline;
+    }
+
+    padding: 10px;
+    padding-left: 0px; 
+}
+
+
+.error{
+    display: block;
+    color: red;
+    font-size: 14px;
+    padding-left: 10px;
+}
