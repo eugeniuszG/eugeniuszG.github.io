@@ -133,7 +133,7 @@ btnSubmit.addEventListener('click', (e)=>{
             var errorMessage = errorFire.message;
             // [START_EXCLUDE]
             if (errorCode == 'auth/email-already-exists') {
-                alert(errorMessage)
+                error('emailErr', errorMessage)
             }
             else{
                 alert(errorMessage)
@@ -174,10 +174,10 @@ login.addEventListener('click', e => {
     auth.signInWithEmailAndPassword(emailLogin, passwordLogin).then(cred =>{
         console.log(cred.user);
 
-    }).catch(function(error) {
+    }).catch(function(errorFirebase) {
         // Handle Errors here.
-        var errorCode = error.code;
-        var errorMessage = error.message;
+        var errorCode = ererrorFirebaseror.code;
+        var errorMessage = errorFirebase.message;
         // [START_EXCLUDE]
         if (errorCode === 'auth/wrong-password') {
           alert('Wrong password.');
