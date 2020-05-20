@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up and Login test</title>
+    <link rel="stylesheet" href="./styles/firebasePWI.css">
+    <link rel="stylesheet" href="./styles/signUp.css">
+    <script src="https://kit.fontawesome.com/3133f04e49.js" crossorigin="anonymous"></script>
+
+<body>
+
+
+    <section class="nav-bar-wrapper">
+        <div>
+        <img src="./images/firebaseLogo.png" alt="firebaseLogo">
+            <ul class="row-inline">
+                <li class="nav-bar-btn">
+                    
+                    <a href="#" id="signInId"> <i class="fas fa-sign-in-alt"></i>Sign In</a>
+                </li>
+                <li class="nav-bar-btn">
+                    <a href="#" id="signUpId"><i class="fas fa-user-plus"></i>Sign Up</a>
+                </li>
+                <li class="nav-bar-btn">
+                    <a href="#" id="logoutId"><i class="fas fa-sign-out-alt"></i>Logout</a>
+                </li>
+                <li class="nav-bar-btn">
+                    <a href="#" id="accountId"><i class="fas fa-user"></i>Account</a>
+                </li>
+            </ul>
+        </div>
+    </section>
+
+
+    <div class="center">
+        <h3 class="lucida-font">Sign Up or Login to see account information details</h3>
+    </div>
+
+
+
+    <!-- Modal window sign Up -->
+    <div id="modal-sign-up-id" class="modal-sign-up">
+        
+        <!-- Modal content -->
+        <div class="modal-content">
+            
+            
+            
+            <div class="form-wrapper">
+                <form id="signup">
+                    <span class="close">&times;</span>
+                    <h3>Please fill form to Sign Up</h3>
+                    <div class="form-container">
+ 
+                        <div class="column">
+                        <div class="row">
+                            <label>Enter your Name:</label>
+                            <input  class="firstName" type="text" name="firstName">
+                            <div class="error" id="firstNameErr"></div>
+                        </div>
+            
+            
+                        <div class="row">
+                            <label>E-mail address:</label>
+                            <input class="email" type="text" name="email">
+                            <div class="error" id="emailErr"></div>
+                        </div>
+                        <div class="row">
+                            <label>Password:</label>
+                            <input class="password" type="password" name="email">
+                            <div class="error" id="passwordErr"></div>
+                        </div>
+            
+                        <div class="row">
+                            <label>Country:</label>
+                            <select class="country" name="country">
+                                <option>--Select country--</option>
+                                <option>Poland</option>
+                                <option>Belarus</option>
+                                <option>United Kingdom</option>
+                            </select>
+                            <div class="error" id="countryErr"></div>
+                        </div>
+            
+            
+                        <div class="row-inline-form">
+                            <label><input type="checkbox" id="policies">I accept terms and policies</label>
+                            <div class="error" id="acceptionErr"></div>
+                        </div>
+            
+            
+            
+                        <div class="row-submit ">
+                            <input class='submit' type="submit" value="Submit">
+                            <input  type="reset" value="Reset">
+                        </div>
+                        </div>
+                    </div>
+            
+            
+            
+                    <div class="row-forgot-login">
+                        <div class="center">
+                            <a class="button-link login">Login</a>
+                        </div>
+            
+                    </div>
+                </form>
+            </div>
+        </div>
+      </div>
+    
+
+      <!-- Modal window Sign In -->
+      <div id="modal-sign-in-id" class="modal-sign-in">
+        
+        <!-- Modal content -->
+        <div class="modal-content">
+            
+            
+            
+            <div class="form-wrapper">
+                <form id="sign-in">
+                    <span class="close">&times;</span>
+                    <h3>Please enter email and password</h3>
+                    <div class="form-container">
+ 
+            
+                        <div class="row">
+                            <label>E-mail address:</label>
+                            <input class="emailLogin" type="text" name="email">
+                            <div class="error" id="emailErr"></div>
+                        </div>
+                        <div class="row">
+                            <label>Password:</label>
+                            <input class="passwordLogin" type="password" name="password">
+                            <div class="error" id="passwordErr"></div>
+                        </div>
+                       
+            
+                        <div class="row-submit ">
+                            <input id="login-btn"  type="button" value="Login">
+                        </div>
+                        </div>
+
+                        <div class="row-forgot-login">
+                            <div class="center">
+                                <a class="button-link forgotPassword">Forgot password?</a>
+                            </div>
+            </div>
+            
+            
+            
+                    
+            
+                    </div>
+                </form>
+            </div>
+        </div>
+      </div>
+
+
+
+
+
+
+        <!-- The core Firebase JS SDK is always required and must be listed first -->
+    <script src="https://www.gstatic.com/firebasejs/7.14.4/firebase-app.js"></script>
+
+    <script src="https://www.gstatic.com/firebasejs/7.14.4/firebase-auth.js"></script>
+
+    <script src="https://www.gstatic.com/firebasejs/7.14.4/firebase-firestore.js"></script>
+
+
+    <script>
+        // Your web app's Firebase configuration
+        var firebaseConfig = {
+            apiKey: "AIzaSyA0gRMGJf-A52U8g8eBWto9_LX7FSnXXh4",
+            authDomain: "pwi-login-auth.firebaseapp.com",
+            databaseURL: "https://pwi-login-auth.firebaseio.com",
+            projectId: "pwi-login-auth",
+            messagingSenderId: "316626615751",
+            appId: "1:316626615751:web:95a18bd025c089d2362de2",
+            measurementId: "G-KPP1SHCZJ2"
+        };
+        // Initialize Firebase
+        firebase.initializeApp(firebaseConfig);
+        const auth = firebase.auth();
+        const db = firebase.firestore();
+    </script>
+
+      <script defer src="./javaScript/faribaseAuth.js"></script>
+      <script defer src="./javaScript/firebasePWI.js"></script>
+</body>
+</html>

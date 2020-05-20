@@ -13,7 +13,7 @@ form {
 
 .form-wrapper {
   width: 400px;
-  background: white;
+  background: honeydew;
   border-radius: 10px;
   margin: auto;
   padding-bottom: 1rem;
@@ -39,6 +39,7 @@ label {
 }
 
 .row input {
+  display: block;
   width: 200px;
   height: 30px;
   border-radius: 5px;
@@ -66,12 +67,12 @@ label {
   padding: 5px;
 }
 
-.row-inline {
+.row-inline-form {
   padding: 10px;
   padding-left: 0px;
 }
 
-.row-inline label {
+.row-inline-form label {
   padding: 10px;
   display: inline;
 }
@@ -81,5 +82,25 @@ label {
   color: red;
   font-size: 14px;
   padding-left: 10px;
+}
+
+.button-link {
+  display: inline;
+  padding: 0;
+  margin: 0 10px;
+  margin-top: 20px;
+  font-family: Arial, Helvetica, sans-serif;
+  color: #069;
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+.row-forgot-login {
+  margin: auto;
+}
+
+.center {
+  margin-top: 1rem;
+  margin-left: 6rem;
 }
 /*# sourceMappingURL=signUp.css.map */

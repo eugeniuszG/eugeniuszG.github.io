@@ -6,13 +6,27 @@
     <title>Sign Up</title>
     <link rel="stylesheet" href="./styles/signUp.css">
 
+
+
+    <!-- The core Firebase JS SDK is always required and must be listed first -->
+    <script defer src="https://www.gstatic.com/firebasejs/7.14.4/firebase-app.js"></script>
+
+    <!-- Firebase auth -->
+    <script src="https://www.gstatic.com/firebasejs/7.14.4/firebase-auth.js"></script>
+
+    <!-- Firebase realtime database -->
+    <script defer src="https://www.gstatic.com/firebasejs/7.14.4/firebase-database.js"></script>
+
+
+    <!-- internal script -->
+    <!-- <script defer src="./javaScript/signUp.js"></script> -->
 </head>
 <body>
 
 <div class="form-wrapper">
 
     
-    <form name='form' onsubmit="return validationForm()" method="POST">
+    <form onsubmit='return mySubmitFunction(event)'>
         <h3>Please fill form to Sign Up</h3>
         <div class="form-container">
             
@@ -57,14 +71,50 @@
                 <div class="error" id="acceptionErr"></div>
             </div>
 
-            <div class="row-submit">
+
+
+            <div class="row-submit ">
                 <input class='submit' type="submit" value="Submit">
                 <input  type="reset" value="Reset">
             </div>
             </div>
         </div>
+
+
+
+        <div class="row-forgot-login">
+            <div class="center">
+                <a href="" class="button-link">Forgot password?</a>
+                <a href="" class="button-link">Login</a>
+            </div>
+
+        </div>
     </form>
 </div>
-<script src="./javaScript/signUp.js"></script>    
+<!-- The core Firebase JS SDK is always required and must be listed first -->
+<script src="https://www.gstatic.com/firebasejs/7.14.4/firebase-app.js"></script>
+
+<!-- TODO: Add SDKs for Firebase products that you want to use
+     https://firebase.google.com/docs/web/setup#available-libraries -->
+
+<script>
+  // Your web app's Firebase configuration
+  var firebaseConfig = {
+    apiKey: "AIzaSyA0gRMGJf-A52U8g8eBWto9_LX7FSnXXh4",
+    authDomain: "pwi-login-auth.firebaseapp.com",
+    databaseURL: "https://pwi-login-auth.firebaseio.com",
+    projectId: "pwi-login-auth",
+    storageBucket: "pwi-login-auth.appspot.com",
+    messagingSenderId: "316626615751",
+    appId: "1:316626615751:web:95a18bd025c089d2362de2",
+    measurementId: "G-KPP1SHCZJ2"
+  };
+  // Initialize Firebase
+  firebase.initializeApp(firebaseConfig);
+  console.log(firebase.app().name);
+</script>
+
+
+
 </body>
 </html>
