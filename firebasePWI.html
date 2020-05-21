@@ -6,17 +6,20 @@
     <title>Sign Up and Login test</title>
     <link rel="stylesheet" href="./styles/firebasePWI.css">
     <link rel="stylesheet" href="./styles/signUp.css">
+    <link rel="icon" href="./images/firebaseLogo.png" />
     <script src="https://kit.fontawesome.com/3133f04e49.js" crossorigin="anonymous"></script>
 
-<body>
+<body class="grad">
 
 
     <section class="nav-bar-wrapper">
         <div>
         <img src="./images/firebaseLogo.png" alt="firebaseLogo">
+        <h2 class="firebase-note">Feel the power of Firebase</h2>
+        <h4 class="greetUser"></h4>
             <ul class="row-inline">
-                <li class="nav-bar-btn">
-                    
+
+                <li class="nav-bar-btn">                    
                     <a href="#" id="signInId"> <i class="fas fa-sign-in-alt"></i>Sign In</a>
                 </li>
                 <li class="nav-bar-btn">
@@ -34,18 +37,43 @@
 
 
     <div class="center">
-        <h3 class="lucida-font">Sign Up or Login to see account information details</h3>
+        <h3 class="lucida-font"></h3>
+    </div>
+
+    <div class="accountInfo">
+        <h3 class="lucida-font py-60">Welcome to your account</h3>
+        <div class="details"></div>
+        <div class="column-edit">
+            <div class="row-inline-edit">
+                <label>Change your name:</label>
+                <input id="changeName" type="text" placeholder="Change your name">
+                <input id="changeNameBtn" type="button" class="changeBtn" value="Change">
+            </div>
+            <div class="row-inline-edit">
+                <label >Change your last name:</label>
+                <input id="changeLastName" type="text" placeholder="Change your last name">
+                <input id="changeLastNameBtn" type="button" class="changeBtn" value="Change">
+            </div>
+            <div class="row-inline-edit">
+                <label >Change your country:</label>
+                <input id="changeCountry" type="text" placeholder="Change country">
+                <input id="changeCountryBtn" type="button" class="changeBtn" value="Change">
+            </div>
+        </div>
+
+        <p> -- Mozna dodawać nowych użytkowników, </p>
+        <p> -- Każde pole jest poddane walidacji,</p>
+        <p> -- Mozna zresetować hasło,</p>
+        <p> -- Nie trzeba odświeżać strony aby zobaczyć zmienione dane,</p>
+        <p> -- Wszystkie wyjątki po stronie backendu wyłapuje Firebase,</p>
     </div>
 
 
 
     <!-- Modal window sign Up -->
     <div id="modal-sign-up-id" class="modal-sign-up">
-        
         <!-- Modal content -->
         <div class="modal-content">
-            
-            
             
             <div class="form-wrapper">
                 <form id="signup">
@@ -55,9 +83,15 @@
  
                         <div class="column">
                         <div class="row">
-                            <label>Enter your Name:</label>
+                            <label>Name:</label>
                             <input  class="firstName" type="text" name="firstName">
                             <div class="error" id="firstNameErr"></div>
+                        </div>
+
+                        <div class="row">
+                            <label>Last name:</label>
+                            <input  class="lastName" type="text" name="firstName">
+                            <div class="error" id="lastNameErr"></div>
                         </div>
             
             
@@ -76,9 +110,56 @@
                             <label>Country:</label>
                             <select class="country" name="country">
                                 <option>--Select country--</option>
-                                <option>Poland</option>
-                                <option>Belarus</option>
-                                <option>United Kingdom</option>
+                                <option value="PL">Poland</option>
+                                <option value="BY">Belarus</option>
+                                <option value="UK">United Kingdom</option>
+                                <option value="AL">Albania</option>
+                                <option value="AD">Andorra</option>
+                                <option value="AT">Austria</option>
+                                <option value="BE">Belgium</option>
+                                <option value="BA">Bosnia and Herzegovina</option>
+                                <option value="BG">Bulgaria</option>
+                                <option value="HR">Croatia (Hrvatska)</option>
+                                <option value="CY">Cyprus</option>
+                                <option value="CZ">Czech Republic</option>
+                                <option value="FR">France</option>
+                                <option value="GI">Gibraltar</option>
+                                <option value="DE">Germany</option>
+                                <option value="GR">Greece</option>
+                                <option value="VA">Holy See (Vatican City State)</option>
+                                <option value="HU">Hungary</option>
+                                <option value="IT">Italy</option>
+                                <option value="LI">Liechtenstein</option>
+                                <option value="LU">Luxembourg</option>
+                                <option value="MK">Macedonia</option>
+                                <option value="MT">Malta</option>
+                                <option value="MD">Moldova</option>
+                                <option value="MC">Monaco</option>
+                                <option value="ME">Montenegro</option>
+                                <option value="NL">Netherlands</option>
+                                <option value="PL">Poland</option>
+                                <option value="PT">Portugal</option>
+                                <option value="RO">Romania</option>
+                                <option value="SM">San Marino</option>
+                                <option value="RS">Serbia</option>
+                                <option value="SK">Slovakia</option>
+                                <option value="SI">Slovenia</option>
+                                <option value="ES">Spain</option>
+                                <option value="UA">Ukraine</option>
+                                <option value="DK">Denmark</option>
+                                <option value="EE">Estonia</option>
+                                <option value="FO">Faroe Islands</option>
+                                <option value="FI">Finland</option>
+                                <option value="GL">Greenland</option>
+                                <option value="IS">Iceland</option>
+                                <option value="IE">Ireland</option>
+                                <option value="LV">Latvia</option>
+                                <option value="LT">Lithuania</option>
+                                <option value="NO">Norway</option>
+                                <option value="SJ">Svalbard and Jan Mayen Islands</option>
+                                <option value="SE">Sweden</option>
+                                <option value="CH">Switzerland</option>
+                                <option value="TR">Turkey</option>
                             </select>
                             <div class="error" id="countryErr"></div>
                         </div>
@@ -113,56 +194,83 @@
     
 
       <!-- Modal window Sign In -->
-      <div id="modal-sign-in-id" class="modal-sign-in">
-        
-        <!-- Modal content -->
-        <div class="modal-content">
-            
-            
-            
-            <div class="form-wrapper">
-                <form id="sign-in">
-                    <span class="close">&times;</span>
-                    <h3>Please enter email and password</h3>
-                    <div class="form-container">
- 
-            
-                        <div class="row">
-                            <label>E-mail address:</label>
-                            <input class="emailLogin" type="text" name="email">
-                            <div class="error" id="emailErr"></div>
-                        </div>
-                        <div class="row">
-                            <label>Password:</label>
-                            <input class="passwordLogin" type="password" name="password">
-                            <div class="error" id="passwordErr"></div>
-                        </div>
-                       
-            
-                        <div class="row-submit ">
-                            <input id="login-btn"  type="button" value="Login">
-                        </div>
-                        </div>
 
-                        <div class="row-forgot-login">
-                            <div class="center">
-                                <a class="button-link forgotPassword">Forgot password?</a>
+
+        <div id="modal-sign-in-id" class="modal-sign-in">
+            <!-- Modal content -->
+            <div class="modal-content">
+                
+                <div class="form-wrapper">
+                    <form>
+                        <span class="close">&times;</span>
+                        <h3>Please enter email and password</h3>
+                        <div class="form-container">
+     
+                
+                            <div class="row">
+                                <label>E-mail address:</label>
+                                <input class="emailLogin" type="text" name="email">
+                                <div class="error" id="emailErrLogin"></div>
                             </div>
-            </div>
-            
-            
-            
-                    
-            
-                    </div>
-                </form>
+                            <div class="row">
+                                <label>Password:</label>
+                                <input class="passwordLogin" type="password" name="password">
+                                <div class="error" id="passwordErrLogin"></div>
+                            </div>
+                           
+                
+                            <div class="row-submit ">
+                                <input id="login-btn"  type="button" value="Login">
+                            </div>
+                            
+    
+                            <div class="row-forgot-login">
+                                <div class="center">
+                                    <a class="button-link forgotPassword">Forgot password?</a>
+                                </div>
+                            </div>
+                
+                        </div>
+                    </form>
+                </div>
             </div>
         </div>
-      </div>
 
 
+        <div id="modal-account" class="modal-account">
+            <!-- Modal content -->
+            <div class="modal-content-info">
+                <span class="close">&times;</span>
+                <h3 class="lucida-font py-60">Account details</h3>                
+            </div>
+        </div>
 
-
+        <div id="modal-resetPass" class="modal-resetPass">
+            <!-- Modal content -->
+            <div class="modal-content">
+                
+                <div class="form-wrapper">
+                    <form id="sign-in">
+                        <span class="close">&times;</span>
+                        <h3>Please enter e-mail to reset password</h3>
+                        <div class="form-container">
+     
+                
+                            <div class="row">
+                                <label>E-mail address:</label>
+                                <input class="emailForgotPass" type="text" name="email">
+                            </div>
+                           
+                            <div class="row-submit ">
+                                <input id="reset-btn"  type="button" value="Reset">
+                            </div>
+                            </div>
+                        </form>           
+                    </div>
+                    
+            </div>
+        </div>
+    
 
 
         <!-- The core Firebase JS SDK is always required and must be listed first -->
